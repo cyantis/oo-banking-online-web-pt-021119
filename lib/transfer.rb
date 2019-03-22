@@ -12,4 +12,15 @@ class Transfer
     @sender.valid? && @receiver.valid?
   end
 
+  def execute_transaction
+    if valid?
+      @sender.amount + @amount
+      @receiver.amount - @amount
+  end
+
+  def reverse_transfer
+    @sender.amount - @amount
+    @receiver.amount + @amount
+  end
+
 end
