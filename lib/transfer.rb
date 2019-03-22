@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    @sender.status == "open" && @sender.status == "open"
+    @sender.valid? && @receiver.valid?
   end
 
 end
