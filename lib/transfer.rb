@@ -14,14 +14,14 @@ class Transfer
 
   def execute_transaction
     if valid?
-      @sender.amount + @amount
-      @receiver.amount - @amount
+      @sender.amount + @balance
+      @receiver.amount - @balance
     end
   end
 
   def reverse_transfer
-    @sender.amount - @amount
-    @receiver.amount + @amount
+    @sender.amount - @balance
+    @receiver.amount + @balance
   end
 
 end
