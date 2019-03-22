@@ -34,7 +34,7 @@ class Transfer
   end
 
   def reject
-    @status = “rejected”
+    @status = "rejected"
     "Transaction rejected. Please check your account balance."
   end
 
