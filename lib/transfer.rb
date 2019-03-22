@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    BankAccount.include?(@sender) && BankAccount.include?(@receiver)
+    @sender.status == "open" && @sender.status == "open"
   end
 
 end
