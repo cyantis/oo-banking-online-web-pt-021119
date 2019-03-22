@@ -7,4 +7,9 @@ class Transfer
     @status = "pending"
     @amount = 50
   end
+
+  def valid?
+    BankAccount.include?(@sender) && BankAccount.include?(@receiver)
+  end
+
 end
