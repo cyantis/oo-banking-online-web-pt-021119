@@ -9,6 +9,7 @@ class Transfer
   end
 
   def valid?
+    binding.pry
     @sender.valid? && @receiver.valid?
   end
 
