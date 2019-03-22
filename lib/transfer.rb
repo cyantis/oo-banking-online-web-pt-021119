@@ -16,6 +16,7 @@ class Transfer
     if valid?
       @sender.amount + @amount
       @receiver.amount - @amount
+    end
   end
 
   def reverse_transfer
